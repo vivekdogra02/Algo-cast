@@ -6,11 +6,11 @@ const dict = {};
 let max = 0;
 let maxChar = '';
 for(let char of str) {
-    // if(dict[char]) {
-    //     dict[char]++;
-    // } else {
-    //     dict[char] = 1
-    // }
+    if(dict[char]) {
+        dict[char]++;
+    } else {
+        dict[char] = 1
+    }
 
      // OR 
      dict[char] = dict[char] + 1  || 1;
