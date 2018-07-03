@@ -23,3 +23,18 @@ function findPair(arr, sum) {
     } 
     console.log('No pair found');
 }
+
+//Hashing technique
+// O(n) time complexity
+// O(n) auxiliary space
+function findPair2(arr, sum) {
+    let dict = {};
+    for(let a in arr) {
+        if(dict[sum - arr[a]]){
+            console.log('Pair found at', dict[sum - arr[a]],  'and ', a);
+            return;
+        }
+        dict[arr[a]] = a;
+    }
+    console.log('No Pair found')
+}
