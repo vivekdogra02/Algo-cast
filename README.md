@@ -1,3 +1,3 @@
 # algo-cast
 
-# Algorithms and Data struture with interview questions
+# Algorithms and Data structure with interview questions
