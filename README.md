@@ -75,4 +75,20 @@
  #### 2. [Merge two sorted list](https://github.com/vivekdogra02/Algo-cast/blob/master/excerises/LinkedList/Merge2SortedLists/index.js) 
  #### 3. [MergeKSortedList](https://github.com/vivekdogra02/Algo-cast/blob/master/excerises/LinkedList/MergeKSortedList/index.js) 
  #### 4. [Reverse-linked-list](https://github.com/vivekdogra02/Algo-cast/blob/master/excerises/LinkedList/Reverse-linklist/index.js) 
+ 
+ 
+ # Space Complexity - Auxiliary space 
+    means the space taken by the whole algorithm, not the space taken up by the inputs
+  #### 1. Most primitive number( booleans, undefined,numbers, null) have O(1) constant space
+  #### 2. String requires  O(n) space (where n is length of the string)
+  #### 3. Array and objects ( reference types) requires  O(n) space (where  for array n is length, number of keys for objects)
+  
+  # Best to Worse case performance measurement
+  #### 1. O(1) - Constant - BEST
+  #### 2. O(log n)  - Searching Algorithm have this, Efficient Sorthing Algorithm have this & Recursiom some time
+  #### 3. O(n)  
+  #### 1. O(n log(n)) 
+  #### 1. O(n2/n3) etc- Worse 
+  
+  
 
