@@ -85,7 +85,7 @@
   
   # Best to Worse case performance measurement
   #### 1. O(1) - Constant - BEST
-  #### 2. O(log n)  - Searching Algorithm have this, Efficient Sorthing Algorithm have this & Recursiom some time
+  #### 2. O(log n)  - Searching Algorithm have this, Efficient Sorthing Algorithm have this & Recursion some time have space complexity in log
   #### 3. O(n)  
   #### 1. O(n log(n)) 
   #### 1. O(n2/n3) etc- Worse 
