@@ -91,4 +91,39 @@
   #### 1. O(n2/n3) etc- Worse 
   
   
+# When to use objects
+ 1. When you don't need order.
+ 2. When you need fast access/insertion and removal
 
+Big(O) of objects
+  1. Insertion - O(1)
+  2. Removal - O(1)
+  3. Searching - O(N)
+  4. Access - O(1)
+
+Big(O) of objects methods
+1. Object.keys - O(N)
+2. Object.values - O(N)
+3. Object.entries - O(N)
+4. Object.hasOwnProperty - O(1)
+
+# When to use Arrays
+ 1. When you need order.
+ 2. When you need fast access/insertion and removal
+
+Big(O) of Arrays
+  1. Insertion - It depends
+  2. Removal - It depends
+  3. Searching - O(N)
+  4. Access - O(1)
+
+Big(O) of Array methods
+1. push - O(1)
+2. pop - O(1)
+3. shift - O(N)
+4. unshift - O(N)
+5. concat - O(N)
+6. slice - O(N)
+7. splice - O(N)
+8. sort - O(n log n)
+9. foreach/map/filter/reduce etc - O(N)
