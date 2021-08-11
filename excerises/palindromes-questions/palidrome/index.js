@@ -30,5 +30,14 @@ var isPalindrome = function(x) {
    return x == reverted || x == parseInt(reverted/10);
 };
 
+// Recursive solution for
+function palindrome(str) {
+    if(str.length === 1) return true;
+    if(str.length === 2) return str[0] === str[1];
+
+    if(str[0] === str.slice(-1)) return palindrome(str.slice(1,-1));
+    return false;
+}
+
 console.log(palindrome('rar'));
 module.exports = palindrome;

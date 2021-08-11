@@ -16,4 +16,50 @@ function BubbleSort(array) {
             }
         }
     }
+    return array;
+}
+
+// Efficient Solution - this will not compare the last element as it will the greatest of all elements
+// and we dont have to do that
+
+function BubbleSort(array) {
+    const length = array.length;
+    for(let i=length; i>0; i--) {
+        for(let j=0 ; j<i-1; j++) {
+            if(array[j] > array[j+1]) {
+                // swap numbers
+                let temp = array[j];
+                array[j] = array[j+1];
+                array[j+1] = temp;
+            }
+        }
+    }
+    return array;
+}
+
+/**
+ *  Most efficient way of implementation - with nearly sorted arrays.
+ * If we have not swap the last time in the whole array 
+ * and reach out to the end, we actually dont need to work 
+ * on the leftover array elements becoz if last time, there is no swapping happens means its already sorted.
+ * 
+ * Only best case - O(2N) - as it requires only 2 iteration
+ */
+function BubbleSort(array) {
+    const length = array.length;
+    var noSwaps = false;
+    for(let i=length; i>0; i--) {
+        noSwaps = true;
+        for(let j=0 ; j<i-1; j++) {
+            if(array[j] > array[j+1]) {
+                // swap numbers
+                let temp = array[j];
+                array[j] = array[j+1];
+                array[j+1] = temp;
+                noSwaps = false;
+            }
+        }
+        if(noSwaps) break;
+    }
+    return array;
 }

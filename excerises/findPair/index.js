@@ -66,7 +66,7 @@ function findP(arr, sum) {
 // Solution 4
 var findPair = (list, k) => {
     for(let i=0; i < list.length; i++){
-      for(let j=0; j < list.length; j++){
+      for(let j=i+1; j < list.length; j++){
         if(list[i] + list[j] === k)
           return true;
       }
