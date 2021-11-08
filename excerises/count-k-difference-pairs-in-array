@@ -1,0 +1,35 @@
+
+// Solution 1 - with hash
+
+var countKDifference = function(k, arr) {
+ let map = {};
+ 
+ for(let n of arr) {
+    map[n] ? map[n]++ : map[n] = 1;
+  }
+  
+  let pairs = 0;
+  
+  for(let i=0; i<arr.length; i++) {
+   if(map[nums[i]-k]) {
+       pairs += map[nums[i] - k]
+    }
+  }
+  
+  return pairs;
+
+}
+
+// Solution 2
+
+var countKDifference = function(nums, k) {
+    var count = 0;
+    for(var i=0; i< nums.length; i++){
+        for(var j=i+1; j <nums.length; j++){
+            if( Math.abs(nums[i] - nums[j]) === k){
+                count++;
+            }
+        }
+    }
+    return count;
+};
