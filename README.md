@@ -77,6 +77,15 @@
  #### 4. [Reverse-linked-list](https://github.com/vivekdogra02/Algo-cast/blob/master/excerises/LinkedList/Reverse-linklist/index.js) 
  
  
+
+ # LeetCode questions
+ #### 1.[Find even digits in an array](https://github.com/vivekdogra02/Algo-cast/blob/master/Leetcode/find-even-digits-in-array/index.js)
+ #### 2.[Max Consecutive Ones](https://github.com/vivekdogra02/Algo-cast/blob/master/Leetcode/Max%20Consecutive%20Ones/index.js)
+ #### 3.[Duplicating Zeros](https://github.com/vivekdogra02/Algo-cast/blob/master/Leetcode/Duplicate-Zeros/index.js)
+ #### 4.[Merge Sorted array](https://github.com/vivekdogra02/Algo-cast/blob/master/Leetcode/Merge-Sorted-array/index.js)
+ #### 5.[Check If N and Its Double Exist](https://github.com/vivekdogra02/Algo-cast/blob/master/Leetcode/Check%20If%20N%20and%20Its%20Double%20Exist/index.js)
+ #### 6.[Valid Mountain Array](https://github.com/vivekdogra02/Algo-cast/blob/master/Leetcode/Valid%20Mountain%20Array/index.js)
+
  # Space Complexity - Auxiliary space 
     means the space taken by the whole algorithm, not the space taken up by the inputs
   #### 1. Most primitive number( booleans, undefined,numbers, null) have O(1) constant space
