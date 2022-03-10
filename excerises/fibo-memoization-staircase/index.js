@@ -22,7 +22,7 @@ var staircase = (function() {
     function f(n) {
         var value;
         if(n in memo) {
-            value = memo[x];
+            value = memo[n];
         } else {
             if( n === 0 || n===1) {
                 return 1;

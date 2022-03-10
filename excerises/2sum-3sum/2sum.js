@@ -37,3 +37,17 @@ var twoSum = function(nums, target) {
         index++;
     }
 };
+
+// Solution 3
+
+function twoSum(nums, target) {
+    let mapped = {};
+
+    for(let i=0; i<nums.length; i++) {
+        let another = target - nums[i];
+        if(another in mapped) {
+            return [mapped[another], i]
+        }
+        mapped[nums[i]] = i
+    }
+}
