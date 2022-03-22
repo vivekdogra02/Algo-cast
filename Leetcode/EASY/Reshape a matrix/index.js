@@ -70,7 +70,6 @@ var matrixReshape = function (mat, r, c) {
 // Solution 3
 var matrixReshape = function (mat, r, c) {
     var result = [].concat(...mat);
-
     if (result.length !== r * c) return mat;
     let newArr = [];
     for (let i = 0; i < r; i++) {
@@ -101,7 +100,7 @@ var matrixReshape = function (mat, r, c) {
 
     // Solution 5
     var matrixReshape = function (mat, r, c) {
-        var [m, n] = [mat.length, mat[0].length]
+        var [m, n] = [mat.length, mat[0].length];
         if (m * n !== r * c) return mat;
         var flat = mat.flat();
         if (r === 1) return [flat];
@@ -113,3 +112,4 @@ var matrixReshape = function (mat, r, c) {
             return result;
         }
     }
+}
