@@ -43,5 +43,13 @@ function cleanedStr(str) {
     .sort()
     .join('');
 }
+
+function isValidAnagram(s,t) {
+    let map = {};
+    s.split('').map(c => map[c] =  map[c] ? map[c] + 1: 1);
+    t.split('').map(c => map[c] =  map[c] ? map[c] - 1: 1);
+
+    return Object.keys(map).every(x => map[x] === 0);
+}
 console.log(anagrams('helc!','chel'))
 module.exports = anagrams;
