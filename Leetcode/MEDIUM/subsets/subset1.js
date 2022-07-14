@@ -99,3 +99,30 @@ var subsets = function (nums) {
   }
   return subsets;
 };
+
+// Solution 6
+
+function subsets(nums) {
+  // global result;
+  let result = [];
+
+  // DFS
+  const dfs = (i, nums, slate) => {
+    // base case
+    if (i === nums.length) {
+      result.push(slate.slice());
+      return;
+    }
+
+    // Exclude
+    dfs(i + 1, nums, slate);
+
+    // Include
+    slate.push(nums[i]);
+    dfs(i + 1, nums, slate);
+    slate.pop();
+  };
+
+  dfs(0, nums, []);
+  return result;
+}
