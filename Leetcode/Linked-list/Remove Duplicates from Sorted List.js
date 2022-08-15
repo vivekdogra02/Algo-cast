@@ -28,6 +28,17 @@ The list is guaranteed to be sorted in ascending order.
  * }
  */
 
+ // Solution 
+
+ function deleteDups(head) {
+    if(head === null) return null;
+    let curr = head;
+
+    while(curr !== null) {
+        if(curr.next !== null && curr.val === curr.next.val)
+    }
+ }
+
 // Solution 1
 var deleteDuplicates = function (head) {
 
