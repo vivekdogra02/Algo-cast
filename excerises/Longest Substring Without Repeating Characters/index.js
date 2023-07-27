@@ -81,3 +81,27 @@ var lengthOfLongestSubstrings = function(s) {
    }
    return maxLength;
    };
+   
+   /**
+    * Using Sliding window approach
+    */
+   
+   function longestSubstring(s) {
+      
+      if(s.length < 2) return s.length;
+      
+      let left=0, longest = 0;
+      let seen ={};
+      
+      for (let right = 0; right < s.length; right++) {
+         const current = s[right];
+         const prevSeen = seen[current];
+         
+         if(prevSeen >= left) {
+            left = prevSeen + 1;
+         }
+         seen[current] = right; // index 
+         longest = Math.max(longest, right -left + 1);
+      }
+      return longest;
+   }
