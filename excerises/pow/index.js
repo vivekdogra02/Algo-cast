@@ -22,26 +22,60 @@ n is a 32-bit signed integer, within the range [−231, 231 − 1]
 
 */
 
-var myPow = function(x, n) {
-   if (n === 0) return 1;
- if (n === 1) return x;
- if (x === 0) return 0;
+var myPow = function (x, n) {
+  if (n === 0) return 1;
+  if (n === 1) return x;
+  if (x === 0) return 0;
 
- if (n > 0) {
-   return (n % 2 === 1 ? x : 1) * myPow(x * x, Math.floor(n / 2));
- } else {
-   return myPow(1 / x, -n);
- }
+  if (n > 0) {
+    return (n % 2 === 1 ? x : 1) * myPow(x * x, Math.floor(n / 2));
+  } else {
+    return myPow(1 / x, -n);
+  }
 };
 
 
 // Solution 2
 
- myPow = function(x, n) {
-   if(n==0) return 1;
-    if(n<0){
-        n = -n;
-        x = 1/x;
-    }
-    return n%2==0 ? myPow(x*x, Math.floor(n/2)) : x*myPow(x*x, Math.floor(n/2));
+myPow = function (x, n) {
+  if (n == 0) return 1;
+  if (n < 0) {
+    n = -n;
+    x = 1 / x;
   }
+  return n % 2 == 0 ? myPow(x * x, Math.floor(n / 2)) : x * myPow(x * x, Math.floor(n / 2));
+}
+
+// Solution 3
+
+var myPow = function (x, n) {
+
+  const helper = (x, n) => {
+    if (n === 0) return 1;
+    if (x === 0) return 0;
+
+    let result = helper(x, Math.floor(n / 2));
+
+    result = result * result;
+    if (n % 2 === 0) {
+      return result;
+    } else {
+      result = result * x;
+      return result;
+    }
+
+  }
+
+  let result = helper(x, Math.abs(n));
+
+  if (n > 0) {
+    return result;
+  } else {
+    return 1 / result;
+  }
+  // if (n < 0) {
+  //   return 1 / result;
+  // } else {
+  //   return result;
+  // }
+};

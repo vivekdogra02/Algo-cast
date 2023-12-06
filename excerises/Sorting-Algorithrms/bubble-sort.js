@@ -6,13 +6,13 @@
 
 function BubbleSort(array) {
     const length = array.length;
-    for(let i=0; i<length; i++) {
-        for(let j=0 ; j<length; j++) {
-            if(array[j] > array[j+1]) {
+    for (let i = 0; i < length; i++) {
+        for (let j = 0; j < length; j++) {
+            if (array[j] > array[j + 1]) {
                 // swap numbers
                 let temp = array[j];
-                array[j] = array[j+1];
-                array[j+1] = temp;
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
             }
         }
     }
@@ -24,13 +24,13 @@ function BubbleSort(array) {
 
 function BubbleSort(array) {
     const length = array.length;
-    for(let i=length; i>0; i--) {
-        for(let j=0 ; j<i-1; j++) {
-            if(array[j] > array[j+1]) {
+    for (let i = length; i > 0; i--) {
+        for (let j = 0; j < i - 1; j++) {
+            if (array[j] > array[j + 1]) {
                 // swap numbers
                 let temp = array[j];
-                array[j] = array[j+1];
-                array[j+1] = temp;
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
             }
         }
     }
@@ -48,18 +48,38 @@ function BubbleSort(array) {
 function BubbleSort(array) {
     const length = array.length;
     var noSwaps = false;
-    for(let i=length; i>0; i--) {
+    for (let i = length; i > 0; i--) {
         noSwaps = true;
-        for(let j=0 ; j<i-1; j++) {
-            if(array[j] > array[j+1]) {
+        for (let j = 0; j < i - 1; j++) {
+            if (array[j] > array[j + 1]) {
                 // swap numbers
                 let temp = array[j];
-                array[j] = array[j+1];
-                array[j+1] = temp;
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
                 noSwaps = false;
             }
         }
-        if(noSwaps) break;
+        if (noSwaps) break;
     }
     return array;
+}
+
+function BubbleSort(n) {
+    let noSwaps = false;
+
+    for (let i = 0; i < n; i++) {
+        noSwaps = true;
+
+        for (let j = 0; j < n - i; j++) {
+            if (n[j] > n[j + 1]) {
+                // swap numbers
+                let tmp = n[j];
+                n[j] = n[j + 1];
+                n[j + 1] = tmp
+                noSwaps = false;
+            }
+        }
+        if (noSwaps) break;
+    }
+    return n;
 }

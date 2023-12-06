@@ -1,0 +1,17 @@
+
+function fibo() {
+
+    let cache = {};
+    return function fib(n) {
+        if(let i in cache)  {
+            return cache[i]
+        } else {
+            if(n <2) {
+                return n;
+            } else {
+                cache[n] = fib(n-1)  + fib(n-2);
+                return cache[n];
+            }
+        }
+    }
+}

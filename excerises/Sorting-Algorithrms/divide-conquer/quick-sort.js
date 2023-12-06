@@ -1,7 +1,7 @@
 // Time - O(n Log(n))  worst= o(N*N)
 // Space - O(log(n))
 
-const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+const numbers = [24, 18, 38, 43, 14, 40, 1, 54];
 
 function quickSort(array, left, right) {
   const len = array.length;
